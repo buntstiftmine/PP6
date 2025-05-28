@@ -103,8 +103,11 @@ Place your completed `print.sh` in `solutions/` and commit. Then link it here:
 #### Reflection Questions
 
 1. **What is the difference between `printf` and `echo` in Bash?**
+    both printf and echo are used to display text but "printf" provides a greater functionality and larger formatting capabilities.
 2. **What is the role of `~/.bashrc` in your shell environment?**
+    The shell script ~/.bashrc runs every time a new shell session is started. It contains shell customization settings (e.g. settings for environment variables, shell options or customized shell prompts). 
 3. **Explain the difference between sourcing (`source ~/.bashrc`) and executing (`./print.sh`).**
+When sourcing a script, the shell runs the script in the current shell environment. When executing a script a new shell process is started to run the script. That means, any changes to the environment do not persist in the original shell.
 
 ---
 
@@ -160,6 +163,7 @@ _start:
 #### Reflection Questions
 
 1. **What is a file descriptor and how does the OS use it?**
+    
 2. **How can you obtain or duplicate a file descriptor for another resource (e.g., a file or socket)?**
 3. **What might happen if you use an invalid file descriptor in a syscall?**
 
@@ -242,7 +246,9 @@ if __name__ == "__main__":
 #### Reflection Questions
 
 1. **Is Python’s print behavior closer to Bash, Assembly, or C? Explain.**
+Python is closest to Bash, because to execute it you can simply run the script (after making the file executable) and dont need to compile it first e.g. by using gcc.
 2. **Can you inspect a Python script’s binary with `objdump`? Why or why not?**
+    No, you cant, because Python script is just a plain text file. There is no binary format.
 
 ---
 
